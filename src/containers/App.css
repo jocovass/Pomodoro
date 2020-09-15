@@ -1,0 +1,32 @@
+:root {
+  --bg: #22222f;
+  --text: #fff;
+  --accent: #2e7e2e;
+  --accent-dark: #236123;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Fira Sans";
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.App {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

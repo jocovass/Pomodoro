@@ -1,0 +1,38 @@
+.Header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Logo {
+  width: 3rem;
+  height: auto;
+  margin-right: 5px;
+}
+.title {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.3rem;
+}
+.title__text {
+  margin-top: 5px;
+}
+.github-button {
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  background-color: var(--accent);
+}
+.github-button:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.nav__link {
+  display: inline-block;
+  margin-right: 2rem;
+  transition: color 0.15s ease-in-out;
+}
+.nav__link:hover {
+  color: var(--accent);
+}

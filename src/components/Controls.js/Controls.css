@@ -1,0 +1,46 @@
+.current-status {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.score {
+  font-size: 1.4rem;
+  font-family: "Wallpoet";
+  margin-left: 3px;
+}
+.controls {
+  margin: 2rem 0;
+}
+.control__label {
+  display: block;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+.completed {
+  color: var(--accent);
+}
+.row {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+label {
+  margin-right: 10px;
+}
+input[type="range"] {
+  border: solid 1px var(--accent);
+  border-radius: 8px;
+  height: 7px;
+  width: 150px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  cursor: pointer;
+}
