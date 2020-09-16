@@ -1,7 +1,8 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useCallback } from "react";
 import "./Timer.css";
 import Controls from "../../components/Controls.js/Controls";
 import Session from "../../components/Session/Session";
+import debounce from "lodash/debounce";
 
 const initialState = {
   focusTime: 25,
@@ -49,25 +50,9 @@ const Timer = () => {
       [e.target.name]: Number(e.target.value),
     });
   };
-  const debaunce = (fn, wait = 500, immediate = true) => {
-    let timeout;
-    return function () {
-      let context = this;
-      let args = arguments;
-      let later = () => {
-        timeout = null;
-        if (!immediate) fn.apply(context, args);
-      };
-      let callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) fn.apply(context, args);
-    };
-  };
-  console.log(state.focusTime);
   return (
     <main className="Main">
-      <Controls state={state} changeHandler={debaunce(changeHandler)} />
+      <Controls state={state} changeHandler={changeHandler} />
       <Session
         focusTime={state.focusTime}
         longBreak={state.longBreak}
